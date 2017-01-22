@@ -8,7 +8,7 @@ echo "==========================================================
         2 - Instalar Kicad
         3 - Instalar FreeCAD
         4 - Instalar Inkscape
-
+	5 - Instalar LibreOffice
 	T - Instala todos os pacotes listados acima
 
         0 - Sair
@@ -72,6 +72,15 @@ echo "INSTALANDO POSSIVEIS ATUALIZAÇÕES"
 	echo "INSTALANDO Inkscape"
 	sudo apt-get install inkscape -y;;      
 
+    5)
+echo "ADICIONANDO REPOSITORIO AO LINUX"
+	sudo add-apt-repository -y ppa:libreoffice/ppa
+echo "VERIFICANDO SE HÁ ATUALIZAÇÕES"
+        sudo apt-get update
+	clear
+echo "INSTALANDO LibreOffice"
+	sudo apt-get install libreoffice libreoffice-style-breeze;;
+	
 
     T)
 	echo "Iniciando Instalação de todos os pacotes"
@@ -88,12 +97,19 @@ echo "INSTALANDO POSSIVEIS ATUALIZAÇÕES"
 	#Kicad
 	echo "ADICIONANDO REPOSITORIO AO LINUX-(KICAD)"
         sudo add-apt-repository --yes ppa:js-reynaud/kicad-4 -y
-	sudo apt-get update
-
+	
 	#Freecad
-	echo "ADICIONANDO REPOSITORIO AO LINUX"
+	echo "ADICIONANDO REPOSITORIO AO LINUX (Freecad)"
  	sudo add-apt-repository ppa:freecad-maintainers/freecad-daily -y
-
+	
+	#LibreOffice
+	echo "ADICIONANDO REPOSITORIO AO LINUX (LibreOffice)"
+	sudo add-apt-repository -y ppa:libreoffice/ppa
+	
+	
+	sudo apt-get update
+	clear
+	
 #Instalando Dependencias
 	echo "INSTALANDO DEPENDENCIAS"
 	sudo apt-get install python-pip -y
@@ -121,8 +137,11 @@ echo "INSTALANDO POSSIVEIS ATUALIZAÇÕES"
 	#Inkscape
 	echo "INSTALANDO Inkscape"
 	sudo apt-get install inkscape -y
+	clear
+	
+	echo "INSTALANDO LibreOffice"
+	sudo apt-get install libreoffice libreoffice-style-breeze
 	clear;;
-
 
     0)
         echo "Saindo..."
