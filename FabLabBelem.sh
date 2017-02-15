@@ -8,9 +8,9 @@ echo "==========================================================
         2 - Instalar Kicad
         3 - Instalar Sublime Text
         4 - Instalar Inkscape
-		5 - Instalar LibreOffice
-		6 - Instalar Repetier Host 1.6.2
-		T - Instala todos os pacotes listados acima
+	5 - Instalar LibreOffice
+	6 - Instalar Repetier Host 1.6.2
+	T - Instala todos os pacotes listados acima
 
         0 - Sair
 ==========================================================="
